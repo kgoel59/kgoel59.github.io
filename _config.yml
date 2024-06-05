@@ -389,7 +389,7 @@ medium_zoom:
 # -----------------------------------------------------------------------------
 # Get external JSON data
 # -----------------------------------------------------------------------------
-
+timezone: Australia/Sydney
 jekyll_get_json:
   - data: resume
     json: assets/json/resume.json # it can also be an url
