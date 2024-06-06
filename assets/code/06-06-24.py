@@ -20,8 +20,6 @@
 from collections import Counter
 from typing import List
 
-from collections import Counter
-
 class Solution:
     def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:
         hand.sort()
