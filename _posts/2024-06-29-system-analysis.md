@@ -61,3 +61,4 @@ I received only 60% for this subject, just passing. The reasons for this are mul
 **Planning**: Adhere to the plan and allow team members to handle their responsibilities. Guide them, but don’t take over their work. Let others grow, even if it deviates from your vision.
 
 [Lectures](/assets/pdf/Project%20Management.zip)
+[Project](https://karangoel59.com/blog/2024/project_management/)
