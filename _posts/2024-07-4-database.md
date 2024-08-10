@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSIT882 - Data Management Systems
-date: 2024-06-29 18:00:01
+date: 2024-07-04 18:00:01
 description: My Learning on CSIT882
 tags: projects learning uow
 categories: learning

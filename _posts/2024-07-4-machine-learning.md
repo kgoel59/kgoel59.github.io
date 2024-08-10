@@ -2,7 +2,7 @@
 
 layout: post  
 title: CSCI933 - Machine Learning Algorithms and Applications  
-date: 2024-06-29 18:00:01  
+date: 2024-07-04 18:00:01  
 description: A comprehensive overview of CSCI933, covering key machine learning algorithms and their applications.  
 tags: projects learning uow  
 categories: learning  
