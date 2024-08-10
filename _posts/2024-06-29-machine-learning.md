@@ -109,4 +109,4 @@ On the practical side, I feel capable of implementing machine learning models ef
 
 I scored 70% in the course, and the theoretical aspects were particularly challenging. SHOULD HAVE FOCUSED MORE ON LECTURES
 
-[Lectures](assets/pdf/ml.zip)
+[Lectures](/assets/pdf/ml.zip)
