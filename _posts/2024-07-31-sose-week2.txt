@@ -1,0 +1,113 @@
+---
+layout: post
+title: "SOSE Week2"
+date: 2024-06-21 08:30:00
+description: Service Modeling
+tags: projects learning uow
+categories: learning
+giscus_comments: true
+featured: false
+---
+
+Model is everywhere ex UML
+
+service description and service modeling is same
+
+ex UML is a desgin language
+
+service description contain
+ 
+service functionality - what (functional points, functional requirements)
+information - how (sink, source, usage)
+non functional (quality factors)
+
+
+Web service standards
+Description - WSDL 
+Invocation - soap/rest
+discovery - uddi
+
+semantic web
+OWL-S
+WSMO
+WSDL
+
+most of these follow - input output precondition effect (basics of any modeling language)
+
+
+XML, JSON, UML, YAML is not
+
+
+Semantic languages are designed to provide well-defined meanings to data, enabling more effective and automated processing by machines. Examples of semantic languages include RDF (Resource Description Framework), OWL (Web Ontology Language), and SPARQL (SPARQL Protocol and RDF Query Language). Here, I'll provide examples of RDF and OWL to illustrate their semantic capabilities.
+
+rdf ex
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <rdf:Description rdf:about="http://example.org/person/JohnDoe">
+    <foaf:name>John Doe</foaf:name>
+    <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</foaf:age>
+    <foaf:knows rdf:resource="http://example.org/person/JaneDoe"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/person/JaneDoe">
+    <foaf:name>Jane Doe</foaf:name>
+  </rdf:Description>
+</rdf:RDF>
+
+
+Key Features of Semantic Languages:
+Explicit Semantics:
+
+Provide clear, machine-readable meanings for data.
+Ontology Support:
+
+Define complex relationships and hierarchies between concepts.
+Interoperability:
+
+Enable integration of data from diverse sources based on shared meanings.
+Inference:
+
+Support reasoning to infer new information from existing data.
+
+Goal - Achiev, Maintaining, Avoiding
+Written in XML
+First-order logic: descriptions of static worlds - Always
+Temporal logic: descriptions of dynamic worlds
+Other: dynamic logic, non-monotonic logic etc.
+
+Condition and assumption - 
+Pre condition - what we have
+Post-conditions - what will be
+Assumptions - hypothesis - go back to start
+
+QOS
+Measure the effectivness of business 
+
+Delivery schedules and Payment schedule
+<functionality, deadline>
+
+
+Things to do
+
+Apply the service model concept in a team (apply software engineering knowledge)
+
+External
+What are goals of team / functions
+What are stakeholders
+What are conditions and assumption
+What is Qos
+What is Delivery schedule
+What are penelities (Escalation Matrix)
+
+Invokation
+How Request can be made
+How Response will be given
+
+
+
+Internal (Software Engineering)
+What is the knowledgebase (semantics)
+What are tools
+WHat is member compostion
+What is the ownership
+What service should be delegated
+
