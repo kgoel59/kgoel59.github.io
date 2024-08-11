@@ -119,3 +119,33 @@ engineering, e.g., modules, objects and components
 
 Reliable Design Without Implementation Knowledge: By defining the service specification, you can design and integrate services without needing to understand the internal implementations of the imported services. This abstraction allows you to compose services based on their interfaces and interactions, ensuring that you can design reliable service compositions.
 
+The basic SOA does not address overarching concerns
+such as management, service orchestration, service transaction management and coordination, security, and other concerns that apply to all components in a services architecture.
+Such concerns are addressed by the extended SOA (ESOA)
+
+The service composition layer in the ESOA encompasses
+necessary roles and functionality for the consolidation of
+multiple services into a single composite service
+
+A service aggregator is a service provider
+that consolidates services that are provided by other service
+providers into a distinct value added service
+
+o manage critical applications/solutions and specific
+markets, ESOA provides managed services in the service
+management layer depicted at the top of the ESOA pyramid
+
+Grid services used in the ESOA’s service management
+layer to provide an enabling infrastructure for systems and
+applications that require the integration and management
+of services with the context of dynamic virtual market-
+places. Grid services provide the possibility to achieve end-
+to-end qualities of service and address critical application
+and system management concerns.
+
+This infrastructure is called the service grid
+bus. The service grid bus (SGB) provides a high-level ab-
+straction architecture and management facilities to allow
+services (within an open service marketplace) to function
+as an integral unit and collaborate with other services
+
