@@ -1,7 +1,7 @@
 ---
 
 layout: post  
-title: "Crypto Week 1"  
+title: "Crypto Week 2"  
 date: 2024-08-02 15:09:00  
 description:  Towards Modern Crypto"  
 tags: projects learning uow
