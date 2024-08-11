@@ -38,7 +38,7 @@ While I was not able to achieve a Distinction in this subject, I understand wher
 **Overthinking**: I wanted my assignments to go a certain way, focusing on the outcome and searching for evidence to support that outcome. But research isn't about directing results; it's about following the evidence wherever it leads.
 
 
-[Lectures](/assets/pdf/Research.zip)  
-[Assignment 1](/assets/pdf/Assignment1.pdf)  
-[Assignment 2](/assets/pdf/Adversarial_attacks_in_AI_systems_7836685_Karan_Goel.pdf)  
+[Lectures](/assets/pdf/research/Research.zip)  
+[Assignment 1](/assets/pdf/research/Assignment1.pdf)  
+[Assignment 2](/assets/pdf/research/Adversarial_attacks_in_AI_systems_7836685_Karan_Goel.pdf)  
 [Proposal](https://karangoel59.com/blog/2024/myfirstproposal/)

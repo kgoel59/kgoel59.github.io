@@ -109,7 +109,7 @@ On the practical side, I feel capable of implementing machine learning models ef
 
 I scored 70% in the course, and the theoretical aspects were particularly challenging. SHOULD HAVE FOCUSED MORE ON LECTURES
 
-[Lectures](/assets/pdf/ml.zip)
-[Assign1](/assets/pdf/Yann_LeCun__A_reflection_on_building_machines_with_human_intelligence.pdf)
-[Assign2](/assets/pdf/Intrusion_detection_using_logistic_regression__A_comparison_of_regularization_methods_and_PCA_logistic_regression_method.pdf)
-[Assign3](/assets/pdf/Aspect_based_sentiment_analysis__A_study_of_the_IMDB_review_database_group_at.pdf)
+[Lectures](/assets/pdf/ml/ml.zip)
+[Assign1](/assets/pdf/ml/Yann_LeCun__A_reflection_on_building_machines_with_human_intelligence.pdf)
+[Assign2](/assets/pdf/ml/Intrusion_detection_using_logistic_regression__A_comparison_of_regularization_methods_and_PCA_logistic_regression_method.pdf)
+[Assign3](/assets/pdf/ml/Aspect_based_sentiment_analysis__A_study_of_the_IMDB_review_database_group_at.pdf)
