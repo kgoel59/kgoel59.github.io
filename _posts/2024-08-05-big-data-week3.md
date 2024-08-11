@@ -1,7 +1,7 @@
 ---
 
 layout: post  
-title: "CSCI946 Big Data Analytics Week 3"  
+title: "CSCI946 - Big Data Analytics Week 3"  
 date: 2024-08-5 15:09:00  
 description: "Methods for Data Exploration"  
 tags: projects learning uow

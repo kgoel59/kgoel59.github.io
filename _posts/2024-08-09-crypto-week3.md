@@ -1,7 +1,7 @@
 ---
 
 layout: post  
-title: "CSCI971 Modern Cryptography Week 3"  
+title: "CSCI971 - Modern Cryptography Week 3"  
 date: 2024-08-09 15:09:00  
 description:  Block Cyphers and Symetric Key Encription"  
 tags: projects learning uow

@@ -1,7 +1,7 @@
 ---
 
 layout: post  
-title: "CSCI971 Modern Cryptography Week 1"  
+title: "CSCI971 - Modern Cryptography Week 1"  
 date: 2024-07-26 15:09:00  
 description:  Introduction"  
 tags: projects learning uow
