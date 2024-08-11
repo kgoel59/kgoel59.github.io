@@ -4,7 +4,7 @@ layout: post
 title: "Big Data Week 1"  
 date: 2024-07-22 15:09:00  
 description: Introduction to Big Data  
-tags: projects, learning, uow  
+tags: projects learning uow 
 categories: learning  
 giscus_comments: true  
 featured: false  

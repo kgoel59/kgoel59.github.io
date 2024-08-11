@@ -4,7 +4,7 @@ layout: post
 title: "Big Data Week 2: Understanding the Data Lifecycle"  
 date: 2024-07-29 15:09:00  
 description: "Exploring the key stages and roles in the data lifecycle for effective data science projects."  
-tags: projects, learning, uow  
+tags: projects learning uow
 categories: learning  
 giscus_comments: true  
 featured: false  
