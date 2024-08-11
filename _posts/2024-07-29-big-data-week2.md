@@ -1,7 +1,7 @@
 ---
 
 layout: post  
-title: "Big Data Week 2"  
+title: "CSCI946 Big Data Analytics Week 2"  
 date: 2024-07-29 15:09:00  
 description: "Exploring the key stages and roles in the data lifecycle for effective data science projects."  
 tags: projects learning uow
