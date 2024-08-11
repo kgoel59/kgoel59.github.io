@@ -59,3 +59,4 @@ This subject proved to be relatively straightforward, covering fundamental conce
 I was able to achieve a distinction with relatively little effort. Although the course was not particularly challenging, it provided valuable insights, particularly into object modeling.
 
 [Lectures](/assets/pdf/database/DB.zip)
+[Assignments](/assets/pdf/database/Assign.zip)

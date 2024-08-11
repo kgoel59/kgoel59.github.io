@@ -74,3 +74,8 @@ While foundational formulas and algorithms are crucial, many have become somewha
 ### Overall Experience
 
 I achieved a Distinction in the course. I feel significantly more knowledgeable about computer vision than before and am eager to apply this knowledge in practice.
+
+[Lectures](/assets/pdf/cv/Lectures.zip)
+[Assignment 1](/assets/pdf/cv/Assignment1.zip)
+[Assignment 2](/assets/pdf/cv/Assignment2.zip)
+[Assignment 3](/assets/pdf/cv/Assignment3.zip)
