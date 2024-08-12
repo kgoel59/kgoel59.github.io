@@ -226,3 +226,6 @@ Hierarchical Clusterin
 
 – Hierarchical agglomerative clustering
 – Hierarchical divisive clusterin
+
+start from once cluster divide into two, until it meet criteria
+can be used top-down or bottom up approach
