@@ -1,0 +1,74 @@
+---
+layout: post
+title: "Crypto Week 3"
+date: 2024-06-24 08:30:00
+description: Introduction
+tags: projects learning uow
+categories: learning
+giscus_comments: true
+featured: false
+---
+
+Integrity - if adversory modify message it can be detected
+
+integrity is achieved by cryptgraphy hash function
+
+prerequestie
+sender and reciever has secure channel (easy to transfer small message)
+
+hash function is easy to compute
+
+h:{0,1}^* -> {0,1}^n
+
+input space is infinity => outspace is limited (2^n)
+
+We assume that it is computationaly hard to calculate hash
+
+adversory should not be able to find h(M) = h(M`)
+
+Collision Resistance:
+Given a hash function h:X→Y , there is no efficient adversary to find x, x′X such that 
+x′x and h(x′ )=h(x) with a non-negligible probability.
+
+Probabilty to break hash when size is q
+
+Check Collision Resistance Birthday Paradox slide
+
+h: {0, 1}*
+→ {0, 1}n . We only need about q=2^{64} for n=128
+
+if you like L bit security then prepare outspace of 2L
+h(x) cannnot be two short
+
+128(MD5) -> broken
+160(SHA1) -> broken 2017 (80 bit) 
+224/256/384/512 SHA2
+224/256/384/512 SHA3
+
+
+SHA2 and SHA3 provide same security level
+ShA3 has different structure
+SHA1 and SHA2 similar structure
+
+DESIGN of SHA1
+Merkle-Damgård Iterative Structure
+
+Divide message into blocks
+
+Use one block f(x) and put it to next
+
+hash fuction uses
+
+file fingerprint
+password storage
+building advance cryptography scheme (Message auth code, Digital signature)
+proof for work (used in bitcoin)
+
+
+Can we use hash fuction as MAC
+no
+
+MaC need key
+
+Mac is suspectible to replay attack
+
