@@ -1,0 +1,131 @@
+---
+layout: post
+title: "SOSE Week1"
+date: 2024-08-28 08:30:00
+description: Soa
+tags: projects learning uow
+categories: learning
+giscus_comments: true
+featured: false
+---
+
+Enterprise: any collection of organizations that has a common 
+set of goals and/or a single bottom line.
+
+Architecture: A formal description of a system, or a detailed plan of the 
+system at component level to guide its implementation.
+
+architecture description
+is a formal description of an information system, 
+organized in a way that supports reasoning about the 
+structural properties of the system.
+
+architecture framework
+is a tool which can be used for developing a broad 
+range of different architectures.
+
+architecture framework should have
+tools
+methods
+and standards
+
+framework 
+TOGAF
+others
+Zachman
+FEAF
+
+
+TOGAF
+
+The Open Group Architecture 
+Framework (TOGAF) is a framework 
+– a detailed method and a set of 
+supporting tools – for developing an 
+enterprise architecture
+
+https://www.opengroup.org/
+
+
+Architecture Domains
+Four levels which can be stacked on top of each others
+
+Business Architecture - Business stratergies, governance, and key Business process
+Data architecture - structure of an organization’s logical and physical data assets 
+Application architecture - application systems to be deployed, their interactions, and their relationships to the core business processes of the organization
+Technology architecture - Describes the logical software and hardware capabilities
+that are required to support the deployment of business, 
+data, and application systems.
+
+in software engineering vocabulary is limited but most thing depend on context
+it is not N layer architecture - Presentation, Application, Domain, Persisistent
+
+
+TOGAF is methodology - (a consistent way of doing things)
+
+Phase A: Architecture Vision - describes the 
+initial phase of an architecture development 
+cycle. It includes information about defining 
+the scope of the architecture development 
+initiative, identifying the stakeholders, 
+creating the Architecture Vision
+
+Phase B: Business Architecture describes 
+the development of a Business Architecture to 
+support the agreed Architecture Vision.
+
+
+
+Phase C: Information Systems 
+Architectures describes the 
+development of Information Systems 
+Architectures to support the agreed 
+Architecture Vision.
+
+Phase D: Technology Architecture
+describes the development of the 
+Technology Architecture to support the 
+agreed Architecture Vision.
+
+Phase E: Opportunities & Solutions
+conducts initial implementation 
+planning and the identification of 
+delivery vehicles for the architecture 
+defined in the previous phases.
+
+Phase F: Migration Planning
+addresses how to move from the 
+Baseline to the Target 
+Architectures by finalizing a detailed 
+Implementation and Migration Plan.
+
+Phase G: Implementation 
+Governance provides an architectural 
+oversight of the implementation.
+
+Phase H: Architecture Change 
+Management establishes procedures 
+for managing change to the new 
+architecture.
+
+Requirements Management
+examines the process of managing 
+architecture requirements throughout 
+the ADM.
+
+
+Archimate has 2d three layers and three viewpoints
+
+Business Layer
+
+Active structure
+
+it is static
+
+Business Actor, Business Role, Business 
+Collaboration, Business Interface, and Location
+
+ex => slide 22 of lecture
+
+
+Business process
