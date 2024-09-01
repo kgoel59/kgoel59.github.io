@@ -1,0 +1,124 @@
+---
+layout: post
+title: "Crypto Week 3"
+date: 2024-06-24 08:30:00
+description: Introduction
+tags: projects learning uow
+categories: learning
+giscus_comments: true
+featured: false
+---
+
+Correctness: For all generated (pk,sk) and all CT←Enc(pk, M), 
+we have 
+Pr[Dec(CT, sk)=M]=1
+
+Security Model of Public-Key Encryption
+
+Ciphertext only: Attacker only knows some ciphertexts
+
+Known plaintext: Attacker knows some plaintext-ciphertext pairs.
+
+Chosen plaintext: Attacker is allowed to choose some plaintexts, and receives the 
+corresponding ciphertexts.
+
+Chosen ciphertext: Attacker is allowed to choose some plaintexts, and receives the 
+corresponding ciphertexts; attacker is also allowed to choose some ciphertexts and 
+receives the corresponding plaintexts
+
+
+adversary has public key 
+1
+2
+
+does not make sense
+
+In PKE, the adversary can encrypt by itself, thus it does not make sense to consider 
+the ciphertext-only attack and the known-plaintext attack, and there is no need to 
+query ciphertext in CPA. (Note that the adversary should know pk
+
+Security Goal
+
+Onewayness: Attacker cannot recover the plaintext.
+• Semantic Security: Attacker cannot learn any information 
+about the plaintext.
+• Indistinguishability : Given a ciphertext CT* and two 
+messages M_0 and M_1 where CT*=Enc(M_c, K), the 
+adversary is going to compute c from {0,1}.
+
+
+why adversary does not make enc queries
+adversary has public key
+
+An Encryption Scheme is Secure if
+NO efficient attacker can win with
+a probability of ½+1/poly(λ).
+
+(IND-CPA)
+ The challenger chooses a key pair (pk,sk) and pk is given to the adversary.
+
+The adversary chooses any two different messages M_0 and M_1. The 
+challenger chooses a random c and computes the challenge ciphertext 
+
+
+(IND-CCA)
+
+Setup: The challenger chooses a key pair (pk,sk) and pk is given to the adversary.
+Phase 1: The adversary can choose any CT for decryption queries.
+
+
+Phase 2: The adversary can choose any CT different from CT* for decryption queries.
+Guess: The adversary returns the guess c’ and wins if c’=c.
+
+
+We mostly IND-CCA1 remove phase 2
+
+
+
+One way trapdoor function
+
+ A function f:{0,1}*→{0,1}* is a one-way trapdoor function if
+• Easy to Compute: There exists a P.P.T algorithm that can compute f(x) for any x.
+• Hard to Invert: For every P.P.T. adversary, given f(x), where x is sampled uniformly at 
+random, we have
+• Easy to Invert with Trapdoor: There exists a trapdoor td and a P.P.T algorithm that given 
+td and f(x), it is easy to compute x.
+
+
+trapdoor is also pseudorandom function
+
+
+where x and r are sampled uniformly at random, i.e., gl(x,r) is pseudorandom 
+given f(x) and r
+
+this IND-CPA
+
+The RSA-OAEP (and Rabin-OAEP) can provide IND-CPA/IND-CCA securit
+
+public_exponent=65537, 2^16 + 1
+
+
+Digital Signatures
+
+• Correctness: For all generated (pk,sk) and all S←Sign(sk, M), 
+we have 
+Pr[Verify(S,M,pk)=1]=1
+Verify(S,M,pk)=1: Here 1 means that the signature is valid
+
+
+Security Model for Signature
+• Adversary’s capability
+– Known tag attack: The adversary knows some messages 
+and the associated tags for them.
+– Chosen Message Attack: Attacker is allowed to choose 
+some messages, and receives the corresponding tags.
+
+
+Secure Signature from
+One-Way Trapdoor Function
+
+
+S←f-1
+(h(M)): This is to invert h(M)
+
+before signing message return hash function
