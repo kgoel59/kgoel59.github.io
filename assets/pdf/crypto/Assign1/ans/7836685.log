@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2024.7.14)  1 SEP 2024 23:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2024.7.14)  1 SEP 2024 23:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/karangoel59/Documents/MyProjects/kg59/kgoel59.github.io/assets/pdf/crypto/Assign1/ans/A1.tex
-(/Users/karangoel59/Documents/MyProjects/kg59/kgoel59.github.io/assets/pdf/crypto/Assign1/ans/A1.tex
+**/Users/karangoel59/Documents/MyProjects/kg59/kgoel59.github.io/assets/pdf/crypto/Assign1/ans/7836685.tex
+(/Users/karangoel59/Documents/MyProjects/kg59/kgoel59.github.io/assets/pdf/crypto/Assign1/ans/7836685.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/base/article.cls
@@ -413,8 +413,8 @@ Package: amsthm 2020/05/29 v2.20.6
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 32.
  (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-) (./A1.aux)
-\openout1 = `A1.aux'.
+) (./7836685.aux)
+\openout1 = `7836685.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
@@ -462,8 +462,8 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 55
  (/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (51.01924pt too wide) in paragraph at lines 55--56
-\OT1/ptm/m/n/12 a dif-fer-ent let-ter. For in-stance, with the sub-sti-tu-tion al-pha-bet \OT1/pcr/m/n/12 BQVXTFZDEUSGYMWLJOCPHIANKR\OT1/ptm/m/n/12 ,
+Overfull \hbox (80.73122pt too wide) in paragraph at lines 55--56
+\OT1/ptm/m/n/12 bet to a dif-fer-ent let-ter. For ex-am-ple, with the sub-sti-tu-tion al-pha-bet \OT1/pcr/m/n/12 BQVXTFZDEUSGYMWLJOCPHIANKR\OT1/ptm/m/n/12 ,
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 57.
@@ -473,13 +473,18 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 {/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <12> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 78.
- [2] [3]
-Overfull \hbox (14.51053pt too wide) in paragraph at lines 162--163
-[]\OT1/ptm/b/n/12 Swap: \OT1/ptm/m/n/12 Af-ter each round, the left and right halves are swapped, so that the out-put $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 L[]; R[]\OT1/cmr/m/n/12 )$
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 81.
+
+Overfull \hbox (12.04762pt too wide) in paragraph at lines 87--88
+[]\OT1/ptm/b/n/12 Example 1.2. []\OT1/ptm/m/it/12 Sup-pose the ci-pher-text \OT1/pcr/m/sl/12 MWXXW! \OT1/ptm/m/it/12 cor-re-sponds to the known plain-text \OT1/pcr/m/sl/12 HELLO!\OT1/ptm/m/it/12 .
  []
 
-[4] [5] [6] [7] [8] (./A1.aux)
+[2] [3] [4]
+Overfull \hbox (10.00645pt too wide) in paragraph at lines 225--226
+[]\OT1/ptm/m/n/12 Thus, the out-put of the 16-round Feis-tel net-work, with the iden-tity round func-tion $\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]; K[]\OT1/cmr/m/n/12 ) =
+ []
+
+[5] [6] [7] [8] (./7836685.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -487,14 +492,14 @@ L3 programming layer <2024-02-20>
  ) 
 Here is how much of TeX's memory you used:
  6483 strings out of 474116
- 106318 string characters out of 5732613
+ 106378 string characters out of 5732613
  1940187 words of memory out of 5000000
  28706 multiletter control sequences out of 15000+600000
  579703 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,93p,654b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,93p,563b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on A1.pdf (8 pages, 142443 bytes).
+Output written on 7836685.pdf (8 pages, 139013 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream

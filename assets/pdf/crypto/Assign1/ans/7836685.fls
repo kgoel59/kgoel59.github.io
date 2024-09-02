@@ -1,8 +1,8 @@
 PWD /Users/karangoel59/Documents/MyProjects/kg59/kgoel59.github.io/assets/pdf/crypto/Assign1/ans
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/web2c/texmf.cnf
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/karangoel59/Documents/MyProjects/kg59/kgoel59.github.io/assets/pdf/crypto/Assign1/ans/A1.tex
-OUTPUT A1.log
+INPUT /Users/karangoel59/Documents/MyProjects/kg59/kgoel59.github.io/assets/pdf/crypto/Assign1/ans/7836685.tex
+OUTPUT 7836685.log
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/base/article.cls
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/base/article.cls
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/base/size12.clo
@@ -115,10 +115,10 @@ INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/psnfss/
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT ./A1.aux
-INPUT ./A1.aux
-INPUT A1.aux
-OUTPUT A1.aux
+INPUT ./7836685.aux
+INPUT ./7836685.aux
+INPUT 7836685.aux
+OUTPUT 7836685.aux
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -176,7 +176,7 @@ INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/public/
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
-OUTPUT A1.pdf
+OUTPUT 7836685.pdf
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map
@@ -201,7 +201,7 @@ INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/adobe/t
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/vf/adobe/courier/pcrro7t.vf
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/tfm/adobe/courier/pcrro8r.tfm
-INPUT A1.aux
+INPUT 7836685.aux
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
