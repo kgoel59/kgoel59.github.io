@@ -1,0 +1,31 @@
+# Association Rules (also called Market basket analysis)
+
+– An unsupervised learning method
+
+Used to identify relation - intresting and hidden
+
+Commonly used for analysis of transaction
+
+also - Apriori Algorithm
+
+
+# Text analysis
+
+- Collecting and Representing Text (Term Frequency, Inverse Document Frequency)
+- Categorizing document by topics
+- Determine Sentiments
+- Gaining Insights
+
+
+Key advantage of deep learning (find best Representation of data)
+
+
+Text analysis
+Refers to Representation, processing and modeling of Textual data (modeling is imporatant)
+Suffers from curse of high dimension
+it is not structured
+
+
+Corpus - A collection of text document used for various purpose in Natural language processing
+
+
