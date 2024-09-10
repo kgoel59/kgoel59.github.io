@@ -1,0 +1,142 @@
+---
+layout: post
+title: "Crypto Week 3"
+date: 2024-06-24 08:30:00
+description: Introduction
+tags: projects learning uow
+categories: learning
+giscus_comments: true
+featured: false
+---
+
+Digital Signature
+
+• Correctness: For all generated (pk,sk) and all S←Sign(sk, M), 
+we have 
+Pr[Verify(S,M,pk)=1]=1
+
+
+Adversary’s capability
+– Known tag attack: The adversary knows some messages 
+and the associated tags for them.
+– Chosen Message Attack: Attacker is allowed to choose 
+some messages, and receives the corresponding tags
+
+However, in blind signature, anyone can get the signature without revealing the message…
+• Can we force the adversary to reveal the message to the challenger? 
+• Yes we can define like this, but in the applications, the conditions may not be satisfied….
+• The problem is solved by requiring the adversary to give q+1 different sigantures if it has made q queries.
+• The definition is good enough for main applications of blind signature, such as electronic cash or electronic voting.
+
+Unforgeability of Blind Signature (Electronic vote, cash)
+Any user can vote for one and can only get one signature
+
+Attacker need q+1 queries which is good enough
+
+Privacy of Blind signature
+• Who should be the adversary for privacy? 
+• The signer!
+• Our goal is to prevent the singer from knowing any information about the message it has been signed.
+• How to define the privacy? Can we define the message indistinguishability following INDCPA security of PKE?
+• That means, the signer (adversary) selects two messages; the challenger runs the signing protocol 
+with the signer (adversary) using one of them.
+• But this security definition cannot prevent the signer from “marking” you when running the protocol 
+with you, i.e., it may produce a signature that is different from the usual ones and then it can detect 
+you when you use your signature. The attack does not conflict with the security definition.
+• How to define the privacy?
+• We allow the signer (adversary) to choose many messages; then the challenger runs the signing 
+protocol with the signer (adversary) using these messages, but in a shuffled order.
+• The adversary’s goal is to match the signing sessions with the messages.
+• We are not going to show the formal definition
+
+ The key generation and the verification algorithm is unchanged.
+• KeyGen:
+• Generate primes P and Q, compute N = PQ
+• Generate d and e such that de = 1 mod (P-1)(Q-1)
+• Public Key (N, e)
+• Private Key (N,d)
+• Verify:
+• Input a message M and a signature S
+• Check Se = H(M) mod N
+
+• We transform the signing algorithm into a 3-step protocol
+• Message masking (by requester):
+• Choose a random value r
+• Compute m = H(M)
+• Compute B = rem mod N
+• Send B to the signer
+• Signing (by signer):
+• Signer computes C = Bd mod N
+• Signer sends C back to the requester
+• Signature Extracting (by requester):
+• The requester computes S = C/r mod N
+• S is a valid signature for M
+
+r^ed = r^key
+
+• Correctness
+• C = Bd mod N = (rem)d mod N = r
+de md mod N = rmd mod N
+• C/r = md mod N = H(M)d mod N
+
+• Unforgeability
+• Unforgeability comes from unforgeability of RSA signature
+• It is possible to generate signature on messages that are not queried!
+• But the attacker can create at most n valid message/signature pairs if he has 
+asked the signer to sign for n times.
+• Privacy
+• Unconditional privacy (One time pad)
+
+Adversory can use m1 and m2 mesaage block to get m1.m2 sign
+for two queries he can get 1 sign but he need two to break the scheme
+
+
+PCK from DL
+
+
+Abelian Group
+• A Group is a set of objects together with an operation defined between any 
+two objects in the set.
+• Let G denote a set and • denote an operation
+• (G, •) is an Abelian group if all the following conditions are met:
+• Closure
+• Associative
+• Commutative
+• Identity
+• Inverse
+
+
+example = Z*q 
+• Let Z*5
+∗
+be the set {1, 2, 3, 4}
+• Consider the operator x mod 5
+• (Z*5, x mod 5) is group
+
+
+ Cyclic Group
+• Let (G, ·) be a finite group of order q. For arbitrary g ∈ G, consider the set 
+〈g〉 = { g0
+, g1
+, . . . } 
+
+• (〈g〉 , ·) is a cyclic group with order p=| 〈g〉 | and g is a generator of (〈g〉 , ·
+
+Hard Problems in Cyclic Groups
+• The Discrete Logarithm Problem (DLP)
+Given a cyclic group G of order q, a generator g in G, and a group element h in G, find 
+the unique non-negative number a<q such that h = g
+a
+.
+• The Computational Diffie-Hellman Problem
+Given a cyclic group G of order q, a generator g in G, and two group elements g
+a and g
+b
+,find g
+ab.
+• The Decisional Diffie-Hellman Problem
+Given a cyclic group G of order q, a generator g in G, and two group elements g
+a and g
+b
+, distinguish g
+ab from a random group element

@@ -27,5 +27,196 @@ it is not structured
 
 
 Corpus - A collection of text document used for various purpose in Natural language processing
+(total number of words)
+
+
+Text mining
+Apply data techniques to text analysis
+
+Procedure
+Collect raw text
+Representing text
+TFIDF
+Topic modeling
+Sentiment analysis
+Gain Insights
+
+Challanges
+Semantics vs Syntax bs Pragmatics
+
+Syntax - concern with grammar
+Semnatics - study meaning of sentence
+Pragmatics - meaning of sentence in certain context
+
+Homonyms are words that have the same spelling 
+but have different meanings.
+– Acronyms are abbreviated versions of words.
+• CGI (Common Gateway Interface vs Computer Graphics 
+Interface). Meaning of “TSIG”?
+
+Disambiguation narrows down the meaning of 
+words or acronyms.
+
+
+– Text is merely a sequence of characters encoded as 
+numbers.
+• Computer Has no understanding of syntax.
+• Computer Has no understanding of semantic meanings.
+• Computer Has no understanding of pragmatic meaning
+
+ In raw form there is no “natural” similarity metric 
+between words or texts.
+
+
+First step: Collecting Raw Text
+
+Be careful about the rights of the owner.
+
+
+Representation of Text
+
+Tokenization
+
+Document -> sentence -> words
+
+Chop the sentence (Subword Tokenization i used in ML)
+
+based on spaces
+based on punctuation mark & spaces
+
+Case folding
+reduce letter to lowercase
+
+
+Stop words “the, a, of, and, to, …”
+you can remove 80% of text but still have meaning
+**so common it become meaningless**
+**to infrequently**
+
+for ex - document related to university of wollongong (remove university and wollongong)
+
+Stemming
+Go back to root walked, walks = walk (chop ending)
+
+Lemmatization
+Go back to root (take into account of morphological analysis of word)
+
+Bag of words
+Check which word appear in document
+
+Convert all document in words
+each sentence can be represent in feature vector of appear or not
+
+
+Bag of words + Naive base is standard
+
+Problem
+no words are given importance, distance between words does not encode semantic information
+(embedding rock!)
+
+
+information Content (Metadata)
+Traditional coprus we have techniques to set importance of word
+
+
+Disadvantage
+Do not dynamically change 
+any dataset change over time
+
+To solve this problem we can use TFIDF
+Term Frequency Inverse document Frequency
+
+
+a metric that adapts to the context 
+and the nature of text (not like IC).
+it can be combined with bag of words model
+
+
+
+What it is
+Term Frequency - number of times a word appears in a document
+
+Zipf Law 
+the i-th most common used words occurs approx 1/i as the most frequent term
+
+issues with term frequency
+- The importance of a term is based on its presence within a particular document
+- it does not give broader view
+
+
+Inverse document frequency
+
+The IDF of a rare term would be high.
+The IDF of a frequent term would be low.
+IDF solely depends on the DF.
+
+
+• A measure that considers:
+– The prevalence of a term within a document (TF).
+– The scarcity of the term over the corpus (IDF)
+
+TFIDF scores a term higher if it appears more 
+often in a document but less in a corpus
+
+Categorizing Documents by Topics
+
+• TFIDF approach: 
+– Represents a document d as a high-dimensional 
+vector of TFIDF(t,d) values.
+– Provides relatively small amount of reduction in 
+description length.
+– Reveals little inter-document or intra-document 
+statistical structure.
+
+
+• Topic models can overcome this problem.
+ – A topic: a cluster of words with related meanings that 
+frequently occur together.
+• Each word has a weight inside this topic
+
+if we can use organize document on topic level we can get much better understanding
+
+
+It is unsupervised learning
+
+LDA
+
+generative model (probolistic)
+There is no rule thumb to determine number of topics
+
+Many to many relation between topic and words
+
+
+LDA use heirarichal Bayes method
+
+
+alpha - Dirichlet parameter
+theta - Document topic Distribution
+z - word topic assigment (relation)
+w - observed world
+
+Randomly sample a topic
+Randomly sample a word
+
+just like cooking - top to down
+
+• LDA assumes
+– There is a fixed vocabulary of words.
+• the vocabulary of words is fixed
+– The number of the latent topics is predefined.
+• the number of topics is fixed.
+– Each latent topic is characterised by a distribution
+over words in a vocabulary .
+– Each document is represented as a random 
+mixture over latent topics.
+
+optimization - negative likelihood optimization
+
+ex - google image
+
+
+
+
+
 
 
