@@ -54,6 +54,16 @@ Predictive Analytics - make some prediction, based on forensic data (useful when
 Diagnostic Analytics - rca (finding causes for issues)
 Prescriptive Analytics - Prescriptive analytics goes beyond prediction by providing recommendations for actions or decisions (giving reccomendation)
 
+Process and event data is usually routinely 
+available in field service support systems 
+(even if it isn’t immediately obvious)
+ The value proposition for process analytics 
+is clear
+ Process improvement
+ Efficient resourcing
+ Dynamic adaptation
+ Risk mitigatio
+
 
 
 
