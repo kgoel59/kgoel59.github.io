@@ -29,6 +29,4 @@ While formalization is definitely key, I feel the course focuses too much on it,
 
 Additionally, I think there’s a lack of detailed practical examples that would help in understanding how these concepts are applied in the real world.
 
-You can find my notes [here](https://karangoel59.com/assets/raw_notes/***).
-
 Oh, and one more thing: when you’re giving an online exam, please check the time twice. I literally missed an hour of the exam because of it. 😅 Scored a bit less because of this

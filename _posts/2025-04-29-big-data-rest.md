@@ -27,4 +27,3 @@ I appreciated the opportunity to learn more algorithms and gain a deeper underst
 
 There wasn’t much that I disliked, but the repetition was a bit much for me. I ended up skipping some of the later lectures because they focused on topics I had already covered in detail.
 
-You can find my notes [here](https://karangoel59.com/assets/raw_notes/*).
