@@ -4,7 +4,6 @@
     "label": "Software Developer",
     "image": "",
     "email": "karangoel59@gmail.com",
-    "phone": "(61)406145089",
     "url": "https://karangoel59.com/",
     "summary": "A software developer passionate about ML and emerging new techonologies.",
     "location": {
@@ -15,11 +14,6 @@
       "region": "New South Wales"
     },
     "profiles": [
-      {
-        "network": "Twitter",
-        "username": "Karan Goel",
-        "url": "https://twitter.com/kgoel59"
-      }
     ]
   },
   "work": [
