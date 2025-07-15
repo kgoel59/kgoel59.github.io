@@ -51,4 +51,4 @@ As we wrapped up the project, the satisfaction of navigating through the complex
 
 [Link to the Report](/assets/pdf/projectm/ProjectManagement_Report.pdf)
 
-[Link to the Github](https://github.com/kgoel59/883-project-management)
+[Link to the Github](https://github.com/kgoel59/templates/tree/master/project-management-template)
