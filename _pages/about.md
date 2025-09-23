@@ -9,8 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
 
-news: true # includes a list of news items
-latest_posts: true # includes a list of the newest posts
+news: false # includes a list of news items
+latest_posts: false # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
@@ -20,4 +20,4 @@ I'm a Software Developer and Engineer with over 3 years of experience across sof
 
 In addition to my background in scalable software systems, I bring over a year of hands-on experience in large language models (LLMs) through applied research and real-world projects. My technical toolkit includes Python, cloud architecture, MLOps, and DevOps practices, enabling me to bridge infrastructure with intelligent systems.<br/><br/>
 
-I’m actively involved in open-source development and always eager to contribute to roles that sit at the intersection of AI engineering, DevOps, and data-centric systems.<br/><br/>
+I’m eager to contribute to roles that sit at the intersection of AI engineering, DevOps, and data-centric systems.<br/><br/>
