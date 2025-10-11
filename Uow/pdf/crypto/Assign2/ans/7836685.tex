@@ -1,0 +1,415 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts,amssymb}
+\usepackage{plain}
+\setcounter{tocdepth}{3}
+\usepackage{color}
+\usepackage{mdframed}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{multicol}
+%\usepackage{algorithmic,algorithm}
+\usepackage{textcomp,booktabs}
+\usepackage{graphicx,booktabs,multirow}
+\usepackage{booktabs}
+\newsavebox{\tablebox}
+\usepackage{times}
+\usepackage{ulem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+
+
+\topmargin -0.5cm \oddsidemargin 0cm \evensidemargin 0cm \textheight
+23cm \textwidth 16cm
+
+\newtheorem{example}{Example}[section]
+
+
+\renewcommand{\baselinestretch}{1.0}
+ 
+\newcommand{\tb}{\textcolor{blue}}
+\newcommand{\tr}{\textcolor{red}}
+
+\hypersetup{
+    hidelinks,         % Hides the links' color but keeps them clickable
+    bookmarksopen=true % Keeps the bookmarks expanded in PDF
+}
+
+%-------------------------------------------------------------------------
+\begin{document}
+
+\pdfbookmark{\contentsname}{toc}
+
+\title{
+    CSCI971/CSCI471 Modern Cryptography \\
+    Assignment 2 \\}
+
+
+\author{
+Name: Karan Goel \\
+Student Number: 7836685
+}
+
+\maketitle
+
+\section{Task A: Ring Signatures in Privacy-Preserving Cryptocurrencies}
+
+% Please briefly describe how ring signatures can be used in privacy-preserving cryptocurrencies. You can refer to the descriptions from the internet but rephrasing is desired.
+
+Ring signatures are cryptographic signatures designed for privacy preservation, allowing a signer (the sender) to generate a signature on behalf of a group of potential signers without disclosing the actual identity of the member who signed.
+
+In the realm of cryptocurrencies, ring signatures are utilized by platforms like Monero. They obscure the sender's identity by mixing their transaction with those of other users, making it challenging to trace the transaction back to a specific individual.
+
+\subsection{How Ring Signature Works}
+
+The signature scheme assumes that all parties agree on a cyclic group \( G \) of order \( q \), a generator \( g \) of \( G \), and a hash function \( H: \{0,1\}^* \to \mathbb{Z}_q \).
+
+\begin{itemize}
+    \item \textbf{KeyGen(\(\lambda\))}: Taking as input a security parameter \( \lambda \), the probabilistic polynomial-time (P.P.T.) algorithm:
+    \begin{enumerate}
+        \item Chooses a uniform \( x \in \mathbb{Z}_q \) and computes \( h = g^x \).
+        \item The public key is \( h \), and the private key is \( x \).
+    \end{enumerate}
+    
+    \item \textbf{Sign(\(sk\), \(M\), \((h_1, \dots, h_l)\))}: Taking as input a message \( M \), a set of public keys \( (h_1, \dots, h_l) \), and a secret key \( sk = x_i \), the P.P.T. algorithm:
+    \begin{enumerate}
+        \item Chooses a random number \( r_i \).
+        \item Computes \( R_i = g^{r_i} \).
+        \item For each \( j \in [1, l] \) where \( j \neq i \):
+        \begin{itemize}
+            \item Chooses random \( c_j \) and \( z_j \).
+            \item Computes \( R_j = \frac{g^{z_j}}{h_j^{c_j}} \).
+        \end{itemize}
+        \item Computes \( c = H(R_1, \dots, R_l, M) \).
+        \item Computes \( c_i = c - \sum_{j \neq i} c_j \).
+        \item Computes \( z_i = r_i + c_i \cdot x_i \mod q \).
+        \item The signature is \( ((R_1, c_1, z_1), \dots, (R_l, c_l, z_l)) \).
+    \end{enumerate}
+    
+    \item \textbf{Verify(\(S\), \(M\), \((h_1, \dots, h_l)\))}: Taking as input a signed message \( M \), a set of public keys \( (h_1, \dots, h_l) \), and a signature \( ((R_1, c_1, z_1), \dots, (R_l, c_l, z_l)) \), the P.P.T. algorithm:
+    \begin{enumerate}
+        \item Computes \( c' = H(R_1, \dots, R_l, M) \).
+        \item Accepts the signature if:
+        \begin{itemize}
+            \item \( c = \sum_{j=1}^{l} c_j \mod q \),
+            \item \( g^{z_j} = R_j h_j^{c_j} \) for all \( j \).
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Cryptocurrency Transaction with Ring Signatures}
+
+A cryptocurrency platform utilizes ring signatures to enhance the privacy of its users during transactions. 
+
+Alice, Bob, Charlie, and David are all users of the cryptocurrency platform.
+
+\begin{enumerate}
+    \item \textbf{Key Generation:}
+    \begin{itemize}
+        \item Each user generates their own public/private key pair.
+        \begin{itemize}
+            \item Alice: \( (PK_A, SK_A) \)
+            \item Bob: \( (PK_B, SK_B) \)
+            \item Charlie: \( (PK_C, SK_C) \)
+            \item David: \( (PK_D, SK_D) \)
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Making a Transaction:}
+    \begin{itemize}
+        \item Alice wants to send 10 coins to a merchant but does not want anyone to know that she is the one making the transaction.
+        \item To preserve her privacy, Alice creates a ring signature that includes her own key (SK\_A) along with the public keys of Bob, Charlie, and David, forming a ring of public keys: \( PK\_A, PK\_B, PK\_C, PK\_D \).
+    \end{itemize}
+
+    \item \textbf{Creating the Ring Signature:}
+    \begin{itemize}
+        \item Alice signs the transaction message, which includes details such as the amount (10 coins), the recipient's address, and the ring of public keys.
+        \item The ring signature proves that the transaction was authorized by one of the members in the group (Alice, Bob, Charlie, or David) without revealing which member actually signed it.
+    \end{itemize}
+
+    \item \textbf{Broadcasting the Transaction:}
+    \begin{itemize}
+        \item Alice broadcasts the transaction along with the ring signature to the cryptocurrency network.
+    \end{itemize}
+
+    \item \textbf{Verification by the Network:}
+    \begin{itemize}
+        \item Miners and nodes in the network receive the transaction. They verify the ring signature using the public keys of Alice, Bob, Charlie, and David.
+        \item The network confirms that the signature is valid, meaning one of the members of the group approved the transaction, but it cannot tell which member it was.
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Key Benefits of Ring Signatures in Cryptocurrency:}
+\begin{itemize}
+    \item \textbf{Anonymity:} The transaction obscures the sender’s identity, providing privacy for users like Alice. This prevents potential tracking of her spending habits or balances by outsiders.
+    \item \textbf{Security:} The transaction is still verifiable, ensuring that only legitimate members of the group can authorize transactions without exposing their identities.
+    \item \textbf{Enhanced Privacy:} Users can transact without fear of exposing their financial activity, making the cryptocurrency more appealing for privacy-conscious individuals.
+\end{itemize}
+
+\section{Task B: Recover the Secret Key of Schnorr Signature Given Two Signatures}
+
+% Please show how to recover the secret key of Schnorr signature given two signatures (R, z1), (R, z2) for different messages M1 and M2.
+
+\subsection{Given:}
+\begin{itemize}
+    \item Two Schnorr signatures:
+    \begin{itemize}
+        \item \((R, z_1)\) for message \(M_1\)
+        \item \((R, z_2)\) for message \(M_2\)
+    \end{itemize}
+    \item The public key \(P\) corresponding to the secret key \(k\).
+    \item The random nonce \(r\) used to compute \(R\):
+    \[
+    R = g^r
+    \]
+    where \(g\) is the generator of the elliptic curve.
+\end{itemize}
+
+\subsection{Steps to Recover the Secret Key:}
+
+\begin{enumerate}
+    \item \textbf{Signature Definition:} In the Schnorr signature scheme, the signature \((R, s)\) for a message \(M\) is defined as:
+    \[
+    s = r + k \cdot H(M, R) \mod q
+    \]
+    where \(H\) is a hash function, \(k\) is the secret key, \(q\) is the order of the group, and \(r\) is the random nonce.
+
+    \item \textbf{Set Up the Equations:} For each signature, we can write the following equations:
+    \[
+    z_1 = r + k \cdot H(M_1, R) \mod q
+    \]
+    \[
+    z_2 = r + k \cdot H(M_2, R) \mod q
+    \]
+
+    \item \textbf{Subtract the Equations:} Subtract the two equations to eliminate \(r\):
+    \[
+    z_1 - z_2 = (k \cdot H(M_1, R) - k \cdot H(M_2, R)) \mod q
+    \]
+    Factor out \(k\):
+    \[
+    z_1 - z_2 = k \cdot (H(M_1, R) - H(M_2, R)) \mod q
+    \]
+    Let \(\Delta H = H(M_1, R) - H(M_2, R)\). The equation simplifies to:
+    \[
+    z_1 - z_2 = k \cdot \Delta H \mod q
+    \]
+
+    \item \textbf{Solve for \(k\):} To find \(k\), rearrange the equation and compute the modular inverse of \(\Delta H\) in the finite field defined by \(q\). This step is valid only if \(\Delta H\) is non-zero.
+    \[
+    k = \frac{z_1 - z_2}{\Delta H} \mod q
+    \]
+
+    \item \textbf{Final Recovery of the Secret Key \(k\):} The secret key \(k\) can be recovered using:
+    \[
+    k = (z_1 - z_2) \cdot (\Delta H^{-1} \mod q) \mod q
+    \]
+\end{enumerate}
+
+\subsection{Conditions:}
+\begin{itemize}
+    \item The same nonce \(R\) should be used for computing signatures. If different nonces were used, this method wouldn't work.
+    \item The subtraction and recovery rely on \(\Delta H\) not being zero (i.e., \(H(M_1, R) \neq H(M_2, R)\)).
+\end{itemize}
+
+\section{Task C: Variant of IBS for multiple identities}
+
+% We need a variant of cryptography notion to meet the following requirements:
+% It is a variant based on identity-based signature (IBS).
+% In normal IBS, the PKG will generate a private key for an identity ID.
+% In this variant IBS, the PKG can generate an accumulated private key (i.e., a single private key) for a bunch of identities, namely ID_1, ID_2, ..., ID_n.
+% The signing algorithm can generate a signature signed by ID using this bunch private key when (1) ID is inside this bunch of identities and (2) the bunch of identities are given.
+% The verification is the same as the normal IBS.
+
+%Please describe the syntax and the correctness requirement for the new cryptographic scheme
+
+\subsection{Syntax for Variant IBS}
+
+This variant of IBS includes the following algorithms:
+
+\begin{itemize}
+    \item \textbf{Setup(\(\lambda\))}: \\
+    This algorithm takes as input a security parameter \( \lambda \) and outputs:
+    \begin{itemize}
+        \item A \textit{master public key} \( MPK \),
+        \item A \textit{master secret key} \( MSK \).
+    \end{itemize}
+
+
+    \item \textbf{KeyGen(\(MPK, MSK, \{ID_1, ID_2, \dots, ID_n\}\))}: \\
+    This is the key generation algorithm run by the Private Key Generator (PKG). Given the master public key \( MPK \), master secret key \( MSK \), and a set of identities \( \{ID_1, ID_2, \dots, ID_n\} \), the PKG generates a \textit{single accumulated private key} \( SK_{\{ID_1, ID_2, \dots, ID_n\}} \) for the set of identities. The same private key can be used to sign messages for any identity in the set.
+
+    \item \textbf{Sign(\(M, MPK, SK_{\{ID_1, \dots, ID_n\}}, ID\))}: \\
+    The signing algorithm takes as input the master public key \( MPK \), the accumulated private key \( SK_{\{ID_1, ID_2, \dots, ID_n\}} \), an identity \( ID \in \{ID_1, \dots, ID_n\} \), and a message \( M \). It outputs a \textit{signature} \( \sigma \) on the message \( M \) for the identity \( ID \), provided that \( ID \) is within the set \( \{ID_1, \dots, ID_n\} \).
+
+    \item \textbf{Verify(\(M,\sigma, MPK, ID\))}: \\
+    The verification algorithm takes as input the master public key \( MPK \), an identity \( ID \), a message \( M \), and a signature \( \sigma \). It outputs a Boolean value indicating whether the signature is valid for the given identity and message. 
+\end{itemize}
+
+\subsection{Correctness}
+
+The correctness of the scheme requires the following condition to be satisfied:
+
+\begin{quote}
+For any \( ID \in \{ID_1, ID_2, \dots, ID_n\} \), if a valid signature \( \sigma \) is generated using the accumulated private key \( SK_{\{ID_1, ID_2, \dots, ID_n\}} \) for a message \( M \), then the verification algorithm should output \textbf{True} when verifying \( (MPK, ID, M, \sigma) \).
+\end{quote}
+
+Formally, this can be expressed as:
+\[
+\text{If } \sigma = \text{Sign}(MPK, SK_{\{ID_1, ID_2, \dots, ID_n\}}, ID, M) \text{ and } ID \in \{ID_1, ID_2, \dots, ID_n\},
+\]
+then:
+
+\[
+\Pr[\text{Verify}(M, \sigma, MPK, ID) = 1] = 1,
+\]
+where \(\text{Verify}(M, \sigma, MPK, ID) = 1\) indicates that the signature is valid.
+
+\section{Task D: IND-CPA of Variant of El Gamal}
+
+% Please show that the following variant of El Gamal encryption is not IND-CPA secure, i.e., you are asked to give an attack that breaks the IND-CPA security for the following scheme.
+
+% - Key gen = Choose group G, GT of order q and generator g of G, where we can perform pairing operation e: G X G -> GT
+
+% - compute h = g^x by choosing x from Zq
+
+% - public key is (G, GT, e, q, g, h), private key is (G, GT, e, q, g ,x), message space is G 
+
+% - encryption = cypher text = (g^r, h^r.m)
+
+% - decryption = m = c2(c1^x)^-1. cypher text is (c1, c2)
+
+\subsection{Scheme Overview}
+
+\begin{itemize}
+    \item \textbf{Key Generation:}
+    \begin{itemize}
+        \item Choose two groups \( G \) and \( G_T \) of order \( q \), where a pairing function \( e: G \times G \rightarrow G_T \) exists.
+        \item Choose a generator \( g \in G \) and a secret key \( x \in \mathbb{Z}_q \).
+        \item Compute \( h = g^x \in G \).
+        \item Public key: \( (G, G_T, e, q, g, h) \).
+        \item Private key: \( (G, G_T, e, q, g, x) \).
+    \end{itemize}
+
+    \item \textbf{Encryption:}
+    \begin{itemize}
+        \item To encrypt a message \( m \in G \):
+        \begin{enumerate}
+            \item Choose a random \( r \in \mathbb{Z}_q \).
+            \item Compute the ciphertext \( (c_1, c_2) = (g^r, h^r \cdot m) = (g^r, g^{xr} \cdot m) \).
+        \end{enumerate}
+    \end{itemize}
+
+    \item \textbf{Decryption:}
+    \begin{itemize}
+        \item Given a ciphertext \( (c_1, c_2) = (g^r, g^{xr} \cdot m) \):
+        \begin{enumerate}
+            \item Compute \( c_1^x = (g^r)^x = g^{xr} \).
+            \item Recover the message as \( m = c_2 \cdot (c_1^x)^{-1} = (g^{xr} \cdot m) \cdot (g^{xr})^{-1} = m \).
+        \end{enumerate}
+    \end{itemize}
+\end{itemize}
+
+\subsection{IND-CPA Attack}
+
+To show that the scheme is not IND-CPA secure, we can present an attack in which an adversary distinguishes between two chosen plaintexts \( m_0 \) and \( m_1 \).
+
+\begin{enumerate}
+    \item \textbf{Challenge Setup:}
+    \begin{itemize}
+        \item The adversary selects two messages \( m_0, m_1 \in G \) and submits them to the challenger.
+        \item The challenger randomly chooses a bit \( b \in \{0, 1\} \) and encrypts \( m_b \) using the encryption scheme. The ciphertext given to the adversary is \( (c_1, c_2) = (g^r, g^{xr} \cdot m_b) \), where \( r \) is randomly chosen.
+    \end{itemize}
+
+    \item \textbf{Adversary's Observation:}
+    \begin{itemize}
+        \item The adversary has access to the ciphertext \( (c_1, c_2) = (g^r, g^{xr} \cdot m_b) \).
+        \item The adversary can compute the pairing \( e(c_1, h) = e(g^r, g^x) = e(g, g)^{xr} \), which is the same as \( e(c_1, h) = e(c_1, g^x) \).
+    \end{itemize}
+
+    \item \textbf{Attack:}
+    \begin{itemize}
+        \item The adversary now tries to distinguish between \( m_0 \) and \( m_1 \).
+        \item The encryption scheme leaks information through the pairing operation.
+        \item The adversary can compute \( e(c_1, g) = e(g^r, g) = e(g, g)^r \).
+        \item This pairing gives the adversary access to \( e(g, g)^r \), which is independent of the encrypted message \( m_b \).
+        \item The adversary can compare \( c_2 \) with \( e(g, g)^r \cdot m_0 \) and \( e(g, g)^r \cdot m_1 \) to check which one matches.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Conclusion}
+
+Since the adversary can compute pairings that allow them to distinguish between the two chosen plaintexts \( m_0 \) and \( m_1 \) with non-negligible probability, the scheme is not IND-CPA secure.
+
+\section{Task E: Message Proof}
+
+% Assume that you have encrypted a message \( M \) using the El Gamal encryption scheme. The ciphertext \( CT = (C_1, C_2) = (g^r, h^r \cdot M) \), where \( g \) is a generator of the group, \( h \) is the public key, and \( r \) is the random value chosen during encryption.
+
+% You are asked to prove that \( M = g^{100} \) or \( M = g^{200} \), without leaking any additional information.
+
+\subsection{Proof Outline}
+
+To prove that the message \( M \) is either \( g^{100} \) or \( g^{200} \), we can employ a zero-knowledge proof. This proof will convince the verifier that \( M \) is one of the two possible values, without revealing which one it is or any other information about the message.
+
+\subsection{Commitment Phase}
+\begin{itemize}
+    \item \textbf{Encryption:} The prover encrypts both possible values \( M_1 = g^{100} \) and \( M_2 = g^{200} \) using the same random value \( r \):
+    \[
+    CT_1 = (C_1^1, C_2^1) = (g^r, h^r \cdot g^{100})
+    \]
+    \[
+    CT_2 = (C_1^2, C_2^2) = (g^r, h^r \cdot g^{200})
+    \]
+    \item \textbf{Commitments:} The prover creates commitments for \( C_1^1 \) and \( C_1^2 \) to hide the choice of \( r \).
+\end{itemize}
+
+\subsection{Challenge Phase}
+The verifier selects a random challenge \( b \in \{1, 2\} \). The challenge asks the prover to show that the ciphertext \( CT = (C_1, C_2) \) corresponds to either \( CT_1 \) or \( CT_2 \).
+
+\subsection{Response Phase}
+The prover responds based on the challenge \( b \):
+
+\begin{itemize}
+    \item \textbf{If the challenge is \( b = 1 \)} (the prover must prove that \( M = g^{100} \)):
+    \begin{itemize}
+        \item The prover reveals the randomness \( r \) used for encrypting \( g^{100} \).
+        \item The prover sends \( r \) to the verifier.
+        \item The verifier checks the validity by verifying:
+        \[
+        C_1 = g^r \quad \text{and} \quad C_2 = h^r \cdot g^{100}
+        \]
+        \item If both equations hold true, then the proof is valid for \( M = g^{100} \).
+    \end{itemize}
+    
+    \item \textbf{If the challenge is \( b = 2 \)} (the prover must prove that \( M = g^{200} \)):
+    \begin{itemize}
+        \item The prover reveals the randomness \( r \) used for encrypting \( g^{200} \).
+        \item The prover sends \( r \) to the verifier.
+        \item The verifier checks the validity by verifying:
+        \[
+        C_1 = g^r \quad \text{and} \quad C_2 = h^r \cdot g^{200}
+        \]
+        \item If both equations hold true, then the proof is valid for \( M = g^{200} \).
+    \end{itemize}
+\end{itemize}
+
+\subsection{Verification Phase}
+The verifier ensures that the ciphertext \( CT \) corresponds to either \( CT_1 \) or \( CT_2 \) based on the challenge. The verifier confirms that:
+\begin{itemize}
+    \item If \( b = 1 \), then the prover has correctly demonstrated that \( M = g^{100} \).
+    \item If \( b = 2 \), then the prover has correctly demonstrated that \( M = g^{200} \).
+\end{itemize}
+
+\subsection{Zero-Knowledge Property}
+This proof construction has the following zero-knowledge properties:
+\begin{itemize}
+    \item \textbf{No Additional Information:} The verifier learns nothing about \( r \) or which specific \( M \) was chosen, as they only validate the correctness of the ciphertext against the challenge without gaining insights into the values used in the encryption.
+    \item \textbf{Indistinguishability:} Since the prover only reveals information pertaining to the challenge, the process ensures that the proof remains indistinguishable from one where the prover is simply guessing \( M \).
+\end{itemize}
+
+
+Thus, the prover successfully demonstrates that \( M \) is either \( g^{100} \) or \( g^{200} \), without revealing any other information.
+
+
+\end{document}

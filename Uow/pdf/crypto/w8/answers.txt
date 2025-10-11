@@ -1,0 +1,36 @@
+Ans 1
+
+The scheme is not secure because even h^r is a random group elememnt and this f(h^r) is a random number in Z_q, it might not be uniform [log(q-1)] but string. For example if
+q = 2^288 + 3
+Then first bit of f(h^r) will always be 1 abd thus reveal fist bit of m
+
+
+example
+
+The last bit of m is always is 1 q is prime and xor will reveal the information for first bit
+
+Injective (One-to-One): No two different elements in the domain map to the same element in the codomain.  every x is has a unique y
+
+Surjective (Onto): Every element in the codomain is the image of at least one element from the domain. In other words, for every element 
+
+every y has x
+
+
+Bijective (One-to-One Correspondence): A function is bijective if it is both injective and surjective, meaning:
+
+every x is has a unique y, every y has x
+
+
+
+log2(q-1) give a bit string
+
+with large q the r function is not uniform 2^228 / 2^ 229 
+
+
+ans2
+
+CCA -> submit any different queries before obtain cypher text
+CCA2 -> submit any different queries before,after obtain cypher text (more power)
+
+
+
