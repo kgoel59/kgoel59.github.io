@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hills and Valleys of Project Management: An Insightful Journey"
+title: "Project Management"
 date: 2024-06-31 15:00:00
 description: Exploring the intricate details of managing a complex health and wellness project from a university course perspective.
 tags: projects health-wellness uow

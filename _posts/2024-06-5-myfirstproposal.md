@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Research Proposal
+title: Research Proposal
 date: 2024-06-5 18:00:01
 description: Small Scale, High Security - Developing Multi-Agent Cyber Threat Detection Framework for SMEs
 tags: projects learning uow
