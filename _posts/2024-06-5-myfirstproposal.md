@@ -6,7 +6,7 @@ description: Small Scale, High Security - Developing Multi-Agent Cyber Threat De
 tags: projects learning research
 categories: uow
 giscus_comments: true
-featured: true
+featured: false
 ---
 
 As we navigate an increasingly digital world, the need for robust cybersecurity measures has never been more critical, especially for Small and Medium-Sized Enterprises (SMEs). Despite the availability of advanced cybersecurity technologies, SMEs often remain vulnerable to cyber threats due to limited resources and awareness. This blog explores a groundbreaking research proposal aimed at addressing these challenges by developing a multi-agent cyber threat detection framework tailored specifically for SMEs.

@@ -15,9 +15,17 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-<br/>
-I'm a Software Developer and Engineer with over 3 years of experience across software development, DevOps, and cloud infrastructure. I’ve worked on diverse projects—independently, as a freelancer, and within collaborative teams—solving complex problems that spark my curiosity.<br/><br/>
+👋 Hi, welcome!
 
-In addition to my background in scalable software systems, I bring over a year of hands-on experience in large language models (LLMs) through applied research and real-world projects. My technical toolkit includes Python, cloud architecture, MLOps, and DevOps practices, enabling me to bridge infrastructure with intelligent systems.<br/><br/>
+This site is a small corner of the internet created by Karan.
 
-I’m actively involved in open-source development and always eager to contribute to roles that sit at the intersection of AI engineering, DevOps, and data-centric systems.<br/><br/>
+You’ll find a mix of blog posts here—
+some thoughtful, some experimental, some fun,
+some written by Karan, some by AI and some by a Ghost.
+
+A few might bore you.
+A few might more bore you.
+That’s the point.
+
+Have a look around, click what catches your eye,
+and enjoy the ride 🚀

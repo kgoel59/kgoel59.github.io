@@ -1,7 +1,7 @@
 ---
 layout: post  
 title: "Irrational Generative Agents – Capstone Project"  
-date: 2025-02-06 15:09:00  
+date: 2025-06-06 15:09:00  
 description: "A Cognitive Agent Framework for Simulating Human-Like Irrational Decision-Making"  
 tags: projects learning ml computerscience
 categories: uow  

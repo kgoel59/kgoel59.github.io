@@ -6,7 +6,7 @@ description: Exploring the intricate details of managing a complex health and we
 tags: learning reflections management projects
 categories: uow
 giscus_comments: true
-featured: true
+featured: false
 ---
 
 Project management, often viewed through the lens of business and technology, encompasses much more. It's about steering a project through the highs and lows, ensuring it aligns with both stakeholder expectations and strategic goals. I recently completed a Project Management class, which culminated in a detailed study of the Recreation and Wellness Intranet Project for Manage Your Health Inc. (MYH). This experience not only provided a deep dive into project management techniques but also offered practical insights into handling real-world challenges.
