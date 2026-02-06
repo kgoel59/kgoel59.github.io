@@ -1,15 +1,15 @@
 ---
 layout: post
-title: CSIT882 - Data Management Systems
+title: Data Management Systems
 date: 2024-07-04 18:00:01
-description: My Learning on CSIT882
+description: My Learning on Data Management Systems
 tags: projects learning uow
 categories: learning
 giscus_comments: false
 featured: false
 ---
 
-## CSIT882 - Data Management Systems
+## Data Management Systems
 
 This subject proved to be relatively straightforward, covering fundamental concepts in data management without introducing anything particularly groundbreaking. Below, I have provided a brief overview of the key topics covered in the lecture notes.
 

@@ -1,9 +1,9 @@
 ---
 
 layout: post  
-title: CSCI933 - Machine Learning Algorithms and Applications  
+title: Machine Learning Algorithms and Applications  
 date: 2024-07-04 18:00:01  
-description: A comprehensive overview of CSCI933, covering key machine learning algorithms and their applications.  
+description: A comprehensive overview of ML, covering key machine learning algorithms and their applications.  
 tags: projects learning uow  
 categories: learning  
 giscus_comments: false  
@@ -11,9 +11,9 @@ featured: false
 
 ---
 
-## CSCI933 - Machine Learning Algorithms and Applications
+## Machine Learning Algorithms and Applications
 
-In the course CSCI933, we explored various facets of machine learning, covering theoretical foundations and practical applications. Here's a detailed look at what we covered:
+In the course on ML, we explored various facets of machine learning, covering theoretical foundations and practical applications. Here's a detailed look at what we covered:
 
 ### Introduction to Linear Algebra
 

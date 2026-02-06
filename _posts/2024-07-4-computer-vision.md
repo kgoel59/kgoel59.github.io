@@ -1,9 +1,9 @@
 ---
 
 layout: post  
-title: CSCI935 - Computer Vision Algorithms and Systems  
+title: Computer Vision Algorithms and Systems  
 date: 2024-07-04 18:00:01  
-description: My Learning on CSCI935  
+description: My Learning on Computer Vision
 tags: projects learning uow  
 categories: learning  
 giscus_comments: false  

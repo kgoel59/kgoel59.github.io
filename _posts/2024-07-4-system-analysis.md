@@ -1,15 +1,15 @@
 ---
 layout: post
-title: CSIT883 - System Analysis and Project Management
+title: System Analysis and Project Management
 date: 2024-07-04 18:00:01
-description: My Learning on CSIT883
+description: My Learning on System Analysis and Project Management
 tags: projects learning uow
 categories: learning
 giscus_comments: false
 featured: false
 ---
 
-## CSIT883 - System Analysis and Project Management
+## System Analysis and Project Management
 
 This subject proved to be more challenging than what i was expeting.
 

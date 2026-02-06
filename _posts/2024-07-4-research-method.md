@@ -1,9 +1,9 @@
 ---
 
 layout: post  
-title: CSIT940 - Research Methodology  
+title: Research Methodology  
 date: 2024-07-04 18:00:01  
-description: My Learning on CSIT940  
+description: My Learning on Research Methodology   
 tags: projects learning uow  
 categories: learning  
 giscus_comments: false  
