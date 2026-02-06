@@ -3,8 +3,8 @@ layout: post
 title: "A Joyful Return: Lord Rama's Homecoming in Ayodhya"
 date: 2024-01-22 15:01:00
 description: Celebration of Lord Rama's return to Ayodhya.
-tags: reflections hinduism
-categories: diary
+tags: reflections religon learning
+categories: personal
 giscus_comments: false
 featured: false
 ---

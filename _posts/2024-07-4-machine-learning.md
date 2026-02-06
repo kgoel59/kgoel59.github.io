@@ -4,8 +4,8 @@ layout: post
 title: Machine Learning Algorithms and Applications  
 date: 2024-07-04 18:00:01  
 description: A comprehensive overview of ML, covering key machine learning algorithms and their applications.  
-tags: projects learning uow  
-categories: learning  
+tags: learning reflections computerscience ml projects
+categories: uow  
 giscus_comments: false  
 featured: false  
 

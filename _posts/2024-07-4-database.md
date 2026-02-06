@@ -3,8 +3,8 @@ layout: post
 title: Data Management Systems
 date: 2024-07-04 18:00:01
 description: My Learning on Data Management Systems
-tags: projects learning uow
-categories: learning
+tags: learning reflections computerscience database
+categories: uow
 giscus_comments: false
 featured: false
 ---

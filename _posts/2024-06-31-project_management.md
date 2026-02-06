@@ -3,8 +3,8 @@ layout: post
 title: "Project Management"
 date: 2024-06-31 15:00:00
 description: Exploring the intricate details of managing a complex health and wellness project from a university course perspective.
-tags: projects health-wellness uow
-categories: learning
+tags: learning reflections management projects
+categories: uow
 giscus_comments: true
 featured: true
 ---

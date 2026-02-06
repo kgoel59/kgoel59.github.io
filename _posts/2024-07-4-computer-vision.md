@@ -4,8 +4,8 @@ layout: post
 title: Computer Vision Algorithms and Systems  
 date: 2024-07-04 18:00:01  
 description: My Learning on Computer Vision
-tags: projects learning uow  
-categories: learning  
+tags: learning reflections computerscience computervision
+categories: uow  
 giscus_comments: false  
 featured: false  
 

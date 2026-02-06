@@ -3,8 +3,8 @@ layout: post
 title: System Analysis and Project Management
 date: 2024-07-04 18:00:01
 description: My Learning on System Analysis and Project Management
-tags: projects learning uow
-categories: learning
+tags: learning reflections computerscience management projects
+categories: uow
 giscus_comments: false
 featured: false
 ---
